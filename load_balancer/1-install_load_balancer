@@ -20,12 +20,12 @@ if ! grep -q "frontend kamipacifique-frontend" /etc/haproxy/haproxy.cfg; then
     server_config="frontend kamipacifique-frontend
         bind *:80
         mode http
-        default_backend tresorshingiro-backend
+        default_backend kamipacifique-backend
 
-    backend tresorshingiro-backend
+    backend kamipacifique-backend
         balance roundrobin
         server 6310-web-01 44.202.27.46:80 check
-        server 6310-web-02 44.202.27.46:80 check"
+        server 6310-web-02 3.95.28.85:80 check"
     
     # Append the configuration to haproxy.cfg
     echo "$server_config" | sudo tee -a /etc/haproxy/haproxy.cfg
