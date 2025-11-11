@@ -21,7 +21,7 @@ frontend kamipacifique-frontend
 
 backend kamipacifique-backend
     balance roundrobin
-    server 6877-web-01 44.202.27.46:80 check
+    server 6877-web-01 54.85.69.88:80 check
     server 6877-web-02 3.95.28.85:80 check
 EOF
 
